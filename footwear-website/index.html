@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stride Street – Shoes, sneakers & sandals</title>
+  <meta name="description" content="Stride Street is a footwear store for sneakers, formal shoes, sandals and boots.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="shoe" viewBox="0 0 200 100">
+      <path d="M10 70C10 50 20 40 40 38L70 34C80 20 95 16 110 22C125 40 150 48 180 56C192 60 194 70 190 76L14 78Z" fill="currentColor"/>
+      <rect x="8" y="74" width="186" height="14" rx="7" fill="#fff" stroke="#12151A" stroke-width="2"/>
+      <path d="M85 40l12 8M100 45l12 8M115 50l12 8" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <a href="#top" class="logo">Stride Street</a>
+    <nav aria-label="Main">
+      <a href="#shop">Shop</a>
+      <a href="#why">Why us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Walk further.<br>Feel lighter.</h1>
+        <p>Everyday sneakers, office shoes, sandals and boots – all in one place, with free delivery above ₹1,999.</p>
+        <a class="btn" href="#shop">Shop shoes</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg class="shoe-big"><use href="#shoe"/></svg>
+      </div>
+    </section>
+
+    <section id="shop" class="shop">
+      <h2>Shop all footwear</h2>
+      <div class="filters" id="filters" role="group" aria-label="Filter by category">
+        <button class="chip active" data-cat="All">All</button>
+        <button class="chip" data-cat="Sneakers">Sneakers</button>
+        <button class="chip" data-cat="Formal">Formal</button>
+        <button class="chip" data-cat="Sandals">Sandals</button>
+        <button class="chip" data-cat="Boots">Boots</button>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </section>
+
+    <section id="why" class="why">
+      <div><h3>Free delivery</h3><p>On every order above ₹1,999.</p></div>
+      <div><h3>30-day returns</h3><p>Wrong size? Exchange it easily.</p></div>
+      <div><h3>Size guide</h3><p>UK 5 to UK 12 in most styles.</p></div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <p><strong>Stride Street</strong> – Pune, Maharashtra</p>
+    <p>hello@stridestreet.example · +91 00000 00000</p>
+    <p class="small">© <span id="year"></span> Stride Street. Demo project.</p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head">
+      <h3>Your cart</h3>
+      <button id="closeCart" aria-label="Close cart">Close</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+      <button class="btn full" id="checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
